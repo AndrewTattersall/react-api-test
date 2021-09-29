@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Interview from "./components/Interview";
+import "./styles.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello and good luck :)</h1>
+      <h2>Your task for today is:</h2>
+      <ul>
+        <li>Fetch data from https://restcountries.eu/rest/v2/all</li>
+        <li>
+          Find UK record. Each object in array has property alpha2Code. UK has
+          alpha2code 'GB'.
+        </li>
+        <li>
+          Add text input field and allow to search countries by name ('name'
+          property)
+        </li>
+        <li>Display results underneath text field and limit them to 10</li>
+      </ul>
+
+      <div className="playground">
+        <Interview />
+      </div>
     </div>
   );
 }
-
-export default App;
